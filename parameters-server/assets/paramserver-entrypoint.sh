@@ -1,13 +1,13 @@
 #!/bin/bash
 
-PARAM_FILE="/root/config/parameters.cfg"
+PARAM_FILE="/config/parameters.cfg"
 
 if [ ! -f $PARAM_FILE ]; then
     cat << EOF
     File '${PARAM_FILE}' not found.
 
-        usage: docker run [options] -v <param_file>:${PARAM_FILE} afdaniele/parameters-server
-
+        usage: docker run -v <param-file>:${PARAM_FILE} <this-image>
+        
 EOF
     exit 1
 fi
